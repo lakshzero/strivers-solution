@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+class solution{
+    public:
+    int count = 0;
+    int sum = 0;
+    int num = 1 ;
+    int whileloop(int d){
+        while (count < 20){
+            if(num%10 == d){
+                sum+= num;
+                count++;
+            }
+            num++;
+        }
+        return sum;
+    }
+};
+int main() {
+    solution obj;
+
+    int d;
+    cin >> d;
+    if (d >= 0 && d <= 9) {
+        cout << obj.whileloop(d);
+    }
+    else{
+        cout<<"invalid";
+    }
+
+    return 0;
